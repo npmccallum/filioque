@@ -26,12 +26,12 @@ graph TB
         receives["'... and receives from the Son'  ......"]
         through["'... through the Son'  ...."]
         filioque["'... and the Son'  ..."]
-        style basic fill:#000000
-        style extra fill:#084B83
-        style proceeds fill:#3E4E77
-        style receives fill:#75506C
-        style through fill:#AB5360
-        style filioque fill:#E15554
+        style basic fill:#FFFF00
+        style extra fill:#CCF533
+        style proceeds fill:#99EB66
+        style receives fill:#66E099
+        style through fill:#33D6CC
+        style filioque fill:#00CCFF
     end
 ```
 
@@ -44,38 +44,52 @@ graph TB
     epiphaniusb ~~~ edict
 
     subgraph Greek
-        deirbalyzeh(["Deir Balyzeh (~350)"])
-        deirbalyzeh ~~~ jerusalem
+        marcellus(["Marcellus (~340)    ..."])
+        style marcellus fill:#FFFF00
 
-        jerusalem(["Jerusalem (~350)"])
-        style jerusalem fill:#084B83
+        deirbalyzeh(["Deir Balyzeh (~350)    ..."])
+        style deirbalyzeh fill:#FFFF00
+
+        marcellus ~~~ deirbalyzeh ~~~ marcellus
+
+        jerusalem(["Jerusalem (~350)    ..."])
+        style jerusalem fill:#CCF533
         
-        nicea[("Nicea (325)")]
-        constantinople[("Constantinople? (381)")]
-        ephesus[("Ephesus (431)")]
-        chalcedon[("Chalcedon (451)")]
+        nicea[("Nicea (325)    ...")]
+        constantinople[("Constantinople? (381) ....")]
+        ephesus[("Ephesus (431)    ...")]
+        chalcedon[("Chalcedon (451)    ...")]
         style nicea stroke-dasharray:3
         style constantinople stroke-dasharray:3
-        style constantinople fill:#504E73
-        style chalcedon fill:#504E73
-        style antiochian fill:#504E73
-        style byzantine fill:#504E73
+        style nicea fill:#FFFF00
+        style constantinople fill:#99EB66
+        style chalcedon fill:#99EB66
+        style antiochian fill:#99EB66
+        style byzantine fill:#99EB66
 
-        nestorius["Nestorius (430)"]
-        eusebius["Eusebius"]
-        basil["Basil"]
-        epiphaniusa["Epiphanius A (374)"]
-        epiphaniusb(["Epiphanius B (374)"])
-        athanasius["Athanasius"]
+        nestorius["Nestorius (430)    ..."]
+        eusebius[/"Eusebius    .."\]
+        athanasius[/"Athanasius    ."\]
+        basil[/"Basil    ."\]
+        epiphaniusa[/"Epiphanius A (374)    ..."\]
+        epiphaniusb[/"Epiphanius B (374)    ..."\]
+        style nestorius fill:#FFFF00
+        style eusebius fill:#FFFF00
+        style basil fill:#FFFF00
+        style athanasius fill:#FFFF00
 
-        style epiphaniusa fill:#504E73
-        style epiphaniusb fill:#995264
+        style epiphaniusa fill:#99EB66
+        style epiphaniusb fill:#66E099
 
-        antiochian[["Antioch (~475)"]]
-        byzantine[["Byzantine Rite (6th c.)"]]
+        antiochian[["Antioch (~475)    ..."]]
+        byzantine[["Byzantine Rite (6th c.)    ..."]]
+
+        marcellus -.-> eusebius
+        marcellus -.-> jerusalem
+        eusebius --> nicea
+        jerusalem ~~~ nicea
 
         nicea --> basil
-        nicea --> eusebius
         nicea --> nestorius
         nicea --> athanasius
         nicea --> epiphaniusa
@@ -89,7 +103,7 @@ graph TB
         constantinople --> antiochian
         constantinople --> byzantine
 
-        ephesus ~~~ nestorius ~~~ ephesus
+        nestorius ~~~ ephesus
 
         ephesus ~~~ chalcedon
         chalcedon ~~~ antiochian
@@ -98,22 +112,22 @@ graph TB
     end
 
     subgraph Armenian
-        armenian(["Armenian (~425)"])
-        armenia[["Armenia (unk.)"]]
-        style armenian fill:#504E73
-        style armenia fill:#504E73
+        armenian(["Armenian (~425)    ..."])
+        armenia[["Armenia (unk.)    ..."]]
+        style armenian fill:#99EB66
+        style armenia fill:#99EB66
         armenian --> armenia
     end
 
     subgraph Latin
-        oldroman(["Old Roman (~150)"])
-        damasus(["Damasus (382-447)"])
-        leo("Leo Epistle 15 (447)")
-        apostles(["Apostles' (~450)"])
-        toledoa[/"Toledo I (400)"\]
-        toledob[/"Toledo II (447)"\]
-        toledoc[/"Toledo III (589)"\]
-        athanasian[/"Athanasian (5th c.)"\]
+        oldroman(["Old Roman (~150)    ..."])
+        damasus[/"Damasus (382-447)    ..."\]
+        leo("Leo Epistle 15 (447)    ...")
+        apostles(["Apostles' (~450)    ..."])
+        toledoa[/"Toledo I (400)    ..."\]
+        toledob[/"Toledo II (447)    ..."\]
+        toledoc[/"Toledo III (589)    ..."\]
+        athanasian[/"Athanasian (5th c.)    ..."\]
 
         spain[["Spain (6th c.)"]]
         gallican[["Gallican Rite? (7th c.)"]]
@@ -121,30 +135,30 @@ graph TB
         hre[["Holy Roman Empire (10th c.)"]]
         rome[["Rome (11th c.)"]]
 
-        style oldroman fill:#000
-        style apostles fill:#000
-        style damasus fill:#E15554
-        style leo fill:#E15554
-        style toledoa fill:#3E4E77
-        style toledob fill:#E15554
-        style toledoc fill:#E15554
-        style athanasian fill:#E15554
-        style spain fill:#E15554
-        style gallican fill:#E15554
-        style athanasian fill:#E15554
-        style frankia fill:#E15554
-        style hre fill:#E15554
-        style rome fill:#E15554
+        style oldroman fill:#FFFF00
+        style apostles fill:#FFFF00
+        style damasus fill:#00CCFF
+        style leo fill:#00CCFF
+        style toledoa fill:#99EB66
+        style toledob fill:#00CCFF
+        style toledoc fill:#00CCFF
+        style athanasian fill:#00CCFF
+        style spain fill:#00CCFF
+        style gallican fill:#00CCFF
+        style athanasian fill:#00CCFF
+        style frankia fill:#00CCFF
+        style hre fill:#00CCFF
+        style rome fill:#00CCFF
         
         oldroman --> apostles
         athanasian ~~~ toledoc
 
         toledoa --> toledob
-        toledob -. "and the son" .-> toledoc
+        toledob -. "and the son .." .-> toledoc
         toledoc --> spain
 
         damasus --> leo
-        leo -. "homoousias ... and the son" .-> toledob
+        leo -. "homoousias ... and the son ......" .-> toledob
         oldroman ~~~ nicea
 
         spain --> gallican
@@ -152,6 +166,11 @@ graph TB
         frankia --> hre
         hre --> rome
     end
+
+    oldroman --> marcellus
+
+
+    epiphaniusb -. "Jerome? .." .-> damasus
 
     constantinople --> armenian
     damasus ~~~ constantinople ~~~ damasus
